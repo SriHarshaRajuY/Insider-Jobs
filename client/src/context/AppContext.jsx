@@ -7,7 +7,7 @@ export const AppContext = createContext()
 
 export const AppContextProvider = (props) => {
 
-    const backendUrl = "https://insider-jobs-backend.onrender.com"
+    const backendUrl = import.meta.env.VITE_BACKEND_URL
 
     const { user } = useUser()
     const { getToken } = useAuth()
